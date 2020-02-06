@@ -8,10 +8,8 @@ function dwarfRollCall(dwarves) {
 
 function summonCaptainPlanet(planeteerCalls){
   let arr = [];
-  let upperStr = "";
   for (let i = 0; i < planeteerCalls.length; i++) {  
-    upperStr = `${planeteerCalls[i].toUpperCase()}!`;
-    arr.push(upperStr);
+    arr.push(`${planeteerCalls[i].toUpperCase()}!`);
   }
   return arr;
 }
@@ -30,14 +28,47 @@ function longPlaneteerCalls(words) {
   }
 }
 
+// function findTheCheese (foods) {
+//   const cheese = ["gouda", "cheddar", "camembert"];
+//   for (let i = 0; i < foods.length; i++) {
+//     for (let j = 0; j < cheese.length; j++) {
+//       if (foods[i] === cheese[j]) {
+//         return foods[i];
+//       }
+//     }
+//   }
+//   return "no cheese!";
+// }
+
 function findTheCheese (foods) {
   const cheese = ["gouda", "cheddar", "camembert"];
   for (let i = 0; i < foods.length; i++) {
-    for (let j = 0; j < cheese.length; j++) {
-      if (foods[i] === cheese[j]) {
-        return foods[i]
-      }
+    let j = 0;
+    while(j < cheese.length & foods[i] != cheese[j]) {
+      j++;
+    }
+    if (j < cheese.length) {
+        return foods[i];
     }
   }
-  return "no cheese!"
+  return "no cheese!";
 }
+
+// function findTheCheese (foods) {
+//   const cheese = ["gouda", "cheddar", "camembert"];
+//   let cheeseArr = [];
+//   for (let i = 0; i < foods.length; i++) {
+//     let j = 0;
+//     while(j < cheese.length & foods[i] != cheese[j]) {
+//       j++;
+//     }
+//     if (j < cheese.length) {
+//         cheeseArr.push(foods[i]);
+//     }
+//   }
+//   if (cheeseArr.length > 0) {
+//     return cheeseArr;
+//   } else {
+//     return "no cheese!";
+//   }
+// }
