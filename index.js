@@ -1,3 +1,14 @@
+function wordsWithB(words) {
+  let wordsArr = []
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].startWith("b") == true) {
+      wordsArr.push(word[i])
+    }
+  
+  }
+  return wordsArr
+}
+
 function dwarfRollCall(dwarves) {
   let str =  "";
   for (let i = 0; i < dwarves.length; i++) {  
